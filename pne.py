@@ -9,6 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
+from PIL import Image
 
 st.set_page_config(page_title="Projeto Final", layout="wide")
 
@@ -19,32 +20,41 @@ def load_lottieurl(url):
     return r.json()
 
 #GIFS
-lottie_abertura = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_4hQRXa.json")
 lottie_database = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_qp1q7mct.json")
 lottie_exploracao = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_bdlrkrqv.json")
-lottie_dashboard = load_lottieurl("https://assets6.lottiefiles.com/private_files/lf30_ajzyv37m.json")
+lottie_analise = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_u8jppxsl.json")
+lottie_unificacao = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_rvwumnmn.json")
+lottie_interface = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_xtvomr66.json")
 lottie_brainstorm = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_ayiupfed.json")
-lottie_gamification = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_ldlns8rs.json")
+lottie_gamificacao = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_ldlns8rs.json")
 lottie_ice = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_3rqwsqnj.json")
 lottie_politica = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_udni1dqy.json")
-lottie_dashboard = load_lottieurl("https://assets6.lottiefiles.com/private_files/lf30_ajzyv37m.json")
 
+#Imagens
+image1 = Image.open('site quebrado.jpg')
+image2 = Image.open('situação das metas.jpg')
+image3 = Image.open('logo pne.png')
 
-# Menu lateral
+#Menu lateral
 with st.sidebar:
     selected = option_menu(
         menu_title="Menu Principal",
-        options=["Objetivo do projeto", "Plano Nacional de Educação", "Dados Abertos", "Divisão das funções", "Evolução do Projeto", "Dashboard", "Análise Estatística"],
+        options=["Objetivo do projeto", "Plano Nacional de Educação", "Dados Abertos", "Evolução do Projeto", "Divisão das funções",  "Análise Estatística", "Dashboard"],
         menu_icon="cast",
         default_index=0
     )
 
-# Header
+#Header
 if selected == "Objetivo do projeto":
     st.title("Objetivo do projeto")
     st.header("Monitoramento das Metas da PNE")
-    st.write("Realizar o acompanhamento das metas do Plano Nacional de Educação (PNE) por meio de análises estatísticas e democratizar o acesso aos seus dados")
-    st_lottie(lottie_abertura, height=300)
+    st.write("Realizar o monitoramento das metas do Plano Nacional de Educação (PNE) por meio de análises estatísticas e democratizar o acesso aos seus dados")
+    st.write("---")
+    st.image(image1, width=1080)
+    st.write("[Link >](https://simec.mec.gov.br/pde/relatorioMonitoramento.php)")
+    st.write("---")
+    st.image(image2, width=1080)
+    st.write("[Link >](https://pne.mec.gov.br/18-planos-subnacionais-de-educacao/38-situacao-das-metas-dos-planos-de-)")
     
 if selected == "Plano Nacional de Educação":
     st.title("O que é a PNE (Plano Nacional de Educação)")
@@ -54,6 +64,7 @@ if selected == "Plano Nacional de Educação":
     st.write("III - melhoria da qualidade do ensino")
     st.write("V - promoção humanística, científica e tecnológica do País.")
     st.write("VI - estabelecimento de meta de aplicação de recursos públicos em educação como proporção do produto interno bruto. (Incluído pela Emenda Constitucional nº 59, de 2009)")
+    st.image(image3)
 
 if selected == "Dados Abertos":
     st.title("As cinco estrelas dos dados abertos: ⭐ ⭐ ⭐ ⭐ ⭐")
@@ -71,14 +82,17 @@ if selected == "Divisão das funções":
     st.write("Coletamos os Dados de bases públicas não estruturadas disponibilizadas pelo governo. Disponibilidade de dados públicos para o usuário")
     st_lottie(lottie_exploracao, height=300)
     st.write("---")
-    st.header("Análise das 20 Metas da PNE")
+    st.header("Análise exploratória das metas")
     st.write("Análisamos as 20 Metas definidas pela PNE, observamos padrões e definimos pontos focais para o projeto")
+    st_lottie(lottie_analise, height=300)
     st.write("---")
     st.header("Estrutura unificada")
     st.write("Dividimos entre os membros do grupo as 20 metas para serem estruturadas e unificadas em um csv")
+    st_lottie(lottie_unificacao, height=300)
     st.write("---")
     st.header("Construção do Dashboard e Site")
-    st.write("Sumarizamos os Dados coletados em um Dashboard interativo e construímos a interface de um site interativo")
+    st.write("Sumarizamos os Dados coletados em um Dashboard e construímos a interface de um site interativo")
+    st_lottie(lottie_interface, height=300)
 
 if selected == "Evolução do Projeto":
     st.title("Evolução do Projeto")
@@ -91,7 +105,7 @@ if selected == "Evolução do Projeto":
     st.write("---")
     st.header("Histórico de Propostas")
     st.subheader("Gamificação na educação")
-    st_lottie(lottie_gamification, height=300)
+    st_lottie(lottie_gamificacao, height=300)
     st.write("Gamificação na educação é uma denominação que tem sido cada vez mais utilizada nos ambientes escolares")
     st.write("Problema: Dificuldade na implementação em território nacional")
     st.write("---")
@@ -111,5 +125,5 @@ if selected == "Dashboard":
 
 if selected == "Análise Estatística":
     st.title("Gráfico de Análise Estatística")
-    components.iframe("https://public.flourish.studio/visualisation/11496831/", width=1400, height=850, scrolling=False)
+    components.iframe("https://public.flourish.studio/visualisation/11820257/", width=1400, height=850, scrolling=False)
 # %%
