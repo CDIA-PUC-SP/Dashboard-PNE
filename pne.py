@@ -146,7 +146,7 @@ if selected == "Divisão das funções":
     st.write("---")
     st.header("Construção do Dashboard e Site")
     st.write(
-        "**Sumarizamos os Dados coletados em um Dashboard e construímos a interface de um site interativo**"
+        "**Sumarizamos os Dados coletados em um Dashboard e construímos a interface de um site interativo [Link do código>](https://github.com/fabricio-inoue/metaspne/blob/master/pne.py)**"
     )
     st_lottie(lottie_interface, height=300)
 
