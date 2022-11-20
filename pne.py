@@ -61,8 +61,8 @@ with st.sidebar:
         menu_title="Menu Principal:",
         options=[
             "Objetivo do projeto",
-            "Plano Nacional de Educação",
             "Dados Abertos",
+            "Plano Nacional de Educação",
             "Evolução do Projeto",
             "Divisão das funções",
             "Análise Estatística",
