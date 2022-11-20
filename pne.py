@@ -67,18 +67,14 @@ if selected == "Plano Nacional de Educação":
     st.image(image3)
 
 if selected == "Dados Abertos":
-    with st.container():
-        left_column, right_column = st.columns(2)
-        with left_column:
-            st.title("As cinco estrelas dos dados abertos: ⭐ ⭐ ⭐ ⭐ ⭐")
-            st.write("**Em 2010, o cientista britânico Tim Berners-Lee, inventor da Web, formulou um sistema de estrelas para encorajar a sociedade, especialmente guardiões de dados governamentais, a abrirem seus dados. O sistema ajuda a diagnosticar o nível de abertura de dados dos órgãos públicos e fornece degraus alcançáveis para se chegar a níveis cada vez mais refinados de dados abertos.**")
-            st.write("**⭐ Publicar bases na Web (em qualquer formato) com licença aberta**")
-            st.write("**⭐ ⭐ Publicar bases em formato estruturado com licença aberta (ex: arquivo Excel, em vez de imagem escaneada)**")
-            st.write("**⭐ ⭐ ⭐ Usar formatos não proprietários e uma licença aberta (ex: arquivo CSV em vez de Excel)**")
-            st.write("**⭐ ⭐ ⭐ ⭐ Usar URLs para descrever coisas, para que qualquer um possa identificá-las**")
-            st.write("**⭐ ⭐ ⭐ ⭐ ⭐ Conectar seus dados a outras bases para dar contexto**")
-        with right_column:
-            st_lottie(lottie_database, height=300)
+    st.title("As cinco estrelas dos dados abertos: ⭐ ⭐ ⭐ ⭐ ⭐")
+    st.write("**Em 2010, o cientista britânico Tim Berners-Lee, inventor da Web, formulou um sistema de estrelas para encorajar a sociedade, especialmente guardiões de dados governamentais, a abrirem seus dados. O sistema ajuda a diagnosticar o nível de abertura de dados dos órgãos públicos e fornece degraus alcançáveis para se chegar a níveis cada vez mais refinados de dados abertos.**")
+    st.write("**⭐ Publicar bases na Web (em qualquer formato) com licença aberta < -- Começamos aqui: [Link de acesso>](https://download.inep.gov.br/publicacoes/institucionais/plano_nacional_de_educacao/relatorio_do_quarto_ciclo_de_monitoramento_das_metas_do_plano_nacional_de_educacao.pdf)**")
+    st.write("**⭐ ⭐ Publicar bases em formato estruturado com licença aberta (ex: arquivo Excel, em vez de imagem escaneada)**")
+    st.write("**⭐ ⭐ ⭐ Usar formatos não proprietários e uma licença aberta (ex: arquivo CSV em vez de Excel)**")
+    st.write("**⭐ ⭐ ⭐ ⭐ Usar URLs para descrever coisas, para que qualquer um possa identificá-las < -- Conclusão: [Link de acesso>](https://metaspne.herokuapp.com/)**")
+    st.write("**⭐ ⭐ ⭐ ⭐ ⭐ Conectar seus dados a outras bases para dar contexto**")
+    st_lottie(lottie_database, height=300)
 
 if selected == "Divisão das funções":
     st.title("Divisão das funções:")
@@ -131,3 +127,4 @@ if selected == "Análise Estatística":
     st.title("Gráfico de Análise Estatística:")
     components.iframe("https://public.flourish.studio/visualisation/11820257/", width=1400, height=850, scrolling=False)
 # %%
+
