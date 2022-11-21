@@ -54,13 +54,15 @@ lottie_politica = load_lottieurl(
 image1 = Image.open("site quebrado.jpg")
 image2 = Image.open("situação das metas.jpg")
 image3 = Image.open("logo pne.png")
+image4 = Image.open("5-star-steps.png")
+image5 = Image.open("Membros.jpg")
 
 # Menu lateral
 with st.sidebar:
     selected = option_menu(
         menu_title="Menu Principal:",
         options=[
-            "Objetivo do projeto",
+            "Introdução",
             "Dados Abertos",
             "Plano Nacional de Educação",
             "Evolução do Projeto",
@@ -72,8 +74,8 @@ with st.sidebar:
         default_index=0,
     )
 
-# Header
-if selected == "Objetivo do projeto":
+# Cabeçalho
+if selected == "Introdução":
     st.title("Objetivo do projeto:")
     st.header("Monitoramento das Metas da PNE")
     st.write(
@@ -89,6 +91,9 @@ if selected == "Objetivo do projeto":
     st.write(
         "**[Link de acesso>](https://pne.mec.gov.br/18-planos-subnacionais-de-educacao/38-situacao-das-metas-dos-planos-de-)**"
     )
+    st.write("---")
+    st.title("Membros:")
+    st.image(image5)
 
 if selected == "Plano Nacional de Educação":
     st.title("O que é a PNE (Plano Nacional de Educação):")
@@ -127,7 +132,7 @@ if selected == "Dados Abertos":
         "**⭐ ⭐ ⭐ ⭐ Usar URLs para descrever coisas, para que qualquer um possa identificá-las < -- Conclusão: [Link de acesso>](https://metaspne.herokuapp.com/)**"
     )
     st.write("**⭐ ⭐ ⭐ ⭐ ⭐ Conectar seus dados a outras bases para dar contexto**")
-    st_lottie(lottie_database, height=300)
+    st.image(image4)
 
 if selected == "Divisão das funções":
     st.title("Divisão das funções:")
