@@ -106,8 +106,7 @@ if selected == "Plano Nacional de Educação":
     st.write("**- Ministério da Educação (MEC);**")
     st.write("**- Conselho Nacional de Educação (CNE);**")
     st.write("**- Fórum Nacional de Educação;**")
-    st.write("**- Comissão de educação: Congresso nacional (câmara dos deputados e senado);**")    
-    )
+    st.write("**- Comissão de educação: Congresso nacional (câmara dos deputados e senado);**")
     st.image(image3)
 
 if selected == "Dados Abertos":
