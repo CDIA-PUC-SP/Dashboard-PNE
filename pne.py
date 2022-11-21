@@ -93,14 +93,21 @@ if selected == "Objetivo do projeto":
 if selected == "Plano Nacional de Educação":
     st.title("O que é a PNE (Plano Nacional de Educação):")
     st.header(
-        "O Plano Nacional de Educação (PNE) é uma Lei Federal nº 13.005/2014 com vigência decenal, que foi implementada no governo Dilma. Está de acordo com o artigo 214 da constituição. São 20 metas (quantificáveis) a serem cumpridas até o ano de 2024, através de estratégias e ações. Suas diretrizes são:"
+        "O Plano Nacional de Educação (PNE) é uma Lei Federal nº 13.005/2014 com vigência decenal, que foi implementada no governo Dilma. São 20 metas (quantificáveis) que terão vigência entre 2014 até 2024, através de estratégias e ações. Está de acordo com o artigo 214 da constituição, as quais seguem as diretrizes:"
     )
     st.write("**I - erradicação do analfabetismo**")
     st.write("**II - universalização do atendimento escolar**")
     st.write("**III - melhoria da qualidade do ensino**")
     st.write("**V - promoção humanística, científica e tecnológica do País.**")
+    st.write("**IV - formação para o trabalho;**")
     st.write(
         "**VI - estabelecimento de meta de aplicação de recursos públicos em educação como proporção do produto interno bruto. (Incluído pela Emenda Constitucional nº 59, de 2009)**"
+    st.write("---")
+    st.header("**4 instâncias avaliam e monitoram continuamente se as metas estão sendo cumpridas.**")
+    st.write("**- Ministério da Educação (MEC);**")
+    st.write("**- Conselho Nacional de Educação (CNE);**")
+    st.write("**- Fórum Nacional de Educação;**")
+    st.write("**- Comissão de educação: Congresso nacional (câmara dos deputados e senado);**")    
     )
     st.image(image3)
 
