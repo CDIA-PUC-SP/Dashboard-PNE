@@ -98,10 +98,9 @@ if selected == "Plano Nacional de Educação":
     st.write("**I - erradicação do analfabetismo**")
     st.write("**II - universalização do atendimento escolar**")
     st.write("**III - melhoria da qualidade do ensino**")
-    st.write("**V - promoção humanística, científica e tecnológica do País.**")
     st.write("**IV - formação para o trabalho;**")
-    st.write(
-        "**VI - estabelecimento de meta de aplicação de recursos públicos em educação como proporção do produto interno bruto. (Incluído pela Emenda Constitucional nº 59, de 2009)**"
+    st.write("**V - promoção humanística, científica e tecnológica do País.**")
+    st.write("**VI - estabelecimento de meta de aplicação de recursos públicos em educação como proporção do produto interno bruto. (Incluído pela Emenda Constitucional nº 59, de 2009)**")
     st.write("---")
     st.header("**4 instâncias avaliam e monitoram continuamente se as metas estão sendo cumpridas.**")
     st.write("**- Ministério da Educação (MEC);**")
